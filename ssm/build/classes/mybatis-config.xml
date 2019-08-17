@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 别名定义 -->
+	<typeAliases>
+		<package name="com.po" />
+	</typeAliases>
+    <!--配置Mapper的位置 -->
+	<mappers> 
+       <mapper resource="com/dao/LoginDao.xml" />
+       <mapper resource="com/dao/PersonDao.xml" />
+      
+	</mappers>
+</configuration>

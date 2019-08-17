@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.PersonDao">
+  <select id="findall" resultType="com.po.Person">
+    select * from person
+  </select>
+  
+  <delete id="delone" parameterType="Integer">
+  delete from person where id=#{id}
+  
+  </delete>
+  <insert id="addone" parameterType="com.po.Person">
+  insert into person(t_title,t_user,site,t_time,audit) values(#{t_title},#{t_user},#{site},#{t_time},#{audit})
+  </insert>
+  
+  <select id="findById" parameterType="int" resultType="com.po.Person">
+  	select * from person where id=#{id}
+  </select>
+  
+  <update id="updateinfo" parameterType="com.po.Person">
+  
+  update person set t_title=#{t_title},t_user=#{t_user},site=#{site},t_time=#{t_time},audit=#{audit} where id=#{id}
+  
+  </update>
+</mapper>
